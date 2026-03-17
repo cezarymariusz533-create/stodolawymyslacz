@@ -71,7 +71,7 @@ const HeroSection = () =>
         <p className="font-display lg:text-2xl leading-snug tracking-tight italic text-foreground/80 text-2xl text-left">
           {quoteText}
         </p>
-        <p className="font-display lg:text-2xl leading-snug tracking-tight text-foreground/80 mt-4">
+        <p className="font-display lg:text-2xl leading-snug tracking-tight text-foreground/80 mt-4"><br></br>
           Henryk Skolimowski
         </p>
       </motion.blockquote>
