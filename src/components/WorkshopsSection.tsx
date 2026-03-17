@@ -1,35 +1,31 @@
 import RevealSection from "./RevealSection";
-import handsClay from "@/assets/hands-clay.jpg";
-import strawInsulation from "@/assets/straw-insulation.jpg";
+import sloma1 from "@/assets/warsztaty-sloma-1.jpg";
+import sloma2 from "@/assets/warsztaty-sloma-2.jpg";
+import sloma3 from "@/assets/warsztaty-sloma-3.jpg";
+import joga1 from "@/assets/warsztaty-joga-1.jpg";
+import joga2 from "@/assets/warsztaty-joga-2.jpg";
+import joga3 from "@/assets/warsztaty-joga-3.jpg";
 
-const workshops = [
+const archiveWorkshops = [
   {
-    category: "budownictwo",
-    title: "Budownictwo naturalne — fundament",
-    date: "12–14 kwietnia 2026",
-    location: "Stodoła Wymysłacz, Lubliniec",
-    image: null,
+    title: "Budowanie ze słomy",
+    description:
+      "Warsztaty konstrukcji ścian ze słomy — od przygotowania beli, przez wypełnianie szkieletu, po izolację i wykończenie.",
+    photos: [
+      { src: sloma1, alt: "Wypełnianie szkieletu belami słomy" },
+      { src: sloma2, alt: "Przygotowanie beli słomy do budowy" },
+      { src: sloma3, alt: "Montaż izolacji ze słomy w ścianie" },
+    ],
   },
   {
-    category: "glina",
-    title: "Tynki gliniane — praktyka",
-    date: "26–27 kwietnia 2026",
-    location: "Stodoła Wymysłacz, Lubliniec",
-    image: handsClay,
-  },
-  {
-    category: "budownictwo",
-    title: "Izolacje ze słomy",
-    date: "10–11 maja 2026",
-    location: "Stodoła Wymysłacz, Lubliniec",
-    image: strawInsulation,
-  },
-  {
-    category: "wspólnota",
-    title: "Krąg decyzyjny — metoda konsensusu",
-    date: "24 maja 2026",
-    location: "Stodoła Wymysłacz, Lubliniec",
-    image: null,
+    title: "Joga na łące",
+    description:
+      "Praktyka jogi na świeżym powietrzu — asany, oddech i relaksacja w otoczeniu natury.",
+    photos: [
+      { src: joga1, alt: "Stojące asany na łące w słońcu" },
+      { src: joga2, alt: "Skłony i rozciąganie w trawie" },
+      { src: joga3, alt: "Savasana — relaksacja na trawie o zachodzie" },
+    ],
   },
 ];
 
@@ -38,43 +34,39 @@ const WorkshopsSection = () => (
     <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <RevealSection>
         <p className="text-xs uppercase tracking-widest font-bold text-muted-foreground mb-4">
-          Warsztaty
+          Archiwum
         </p>
         <h2 className="font-display font-bold text-3xl lg:text-5xl tracking-tight mb-16">
-          Ucz się rękami.
+          Warsztaty, które się odbyły.
         </h2>
       </RevealSection>
 
-      <div className="grid md:grid-cols-2 gap-1">
-        {workshops.map((w, i) => (
-          <RevealSection key={w.title} delay={i * 0.1}>
-            <div className="group cursor-pointer">
-              {/* Image or terracotta block */}
-              <div className="aspect-square overflow-hidden mb-4 bg-primary">
-                {w.image ? (
-                  <img
-                    src={w.image}
-                    alt={w.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-end p-6">
-                    <span className="text-primary-foreground font-display font-bold text-lg">
-                      {w.title}
-                    </span>
-                  </div>
-                )}
-              </div>
+      <div className="space-y-24">
+        {archiveWorkshops.map((workshop, wi) => (
+          <RevealSection key={workshop.title} delay={wi * 0.15}>
+            <div>
+              <h3 className="font-display font-bold text-xl lg:text-2xl tracking-tight mb-3">
+                {workshop.title}
+              </h3>
+              <p className="text-muted-foreground max-w-2xl mb-8">
+                {workshop.description}
+              </p>
 
-              <div className="pb-8">
-                <span className="text-[10px] uppercase tracking-widest font-bold text-primary block mb-2">
-                  {w.category}
-                </span>
-                <h3 className="font-display font-bold text-lg tracking-tight mb-2">
-                  {w.title}
-                </h3>
-                <p className="text-sm text-muted-foreground font-mono">{w.date}</p>
-                <p className="text-sm text-muted-foreground">{w.location}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                {workshop.photos.map((photo) => (
+                  <figure key={photo.alt} className="group">
+                    <div className="aspect-[4/3] overflow-hidden bg-muted">
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                    <figcaption className="text-xs text-muted-foreground mt-2 font-mono">
+                      {photo.alt}
+                    </figcaption>
+                  </figure>
+                ))}
               </div>
             </div>
           </RevealSection>
