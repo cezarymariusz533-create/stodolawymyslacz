@@ -27,7 +27,7 @@ const AboutSection = () => (
                 od podróży Andrzeja po wspólnotach Europy, od pytania: czy da się żyć inaczej?
               </p>
               <p>
-                W Lublińcu na Śląsku powstało miejsce, które nie chce być produktem. Stodoła Wymysłacz
+                W Lublińcu na Śląsku powstało miejsce, które nie chce być produktem. Stodoła Wymyślacz
                 to archiwum żywej wiedzy — o tym, jak budować domy z gliny, jak podejmować decyzje
                 w kręgu, jak wrócić do ziemi.
               </p>

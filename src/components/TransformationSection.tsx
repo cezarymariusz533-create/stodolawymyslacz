@@ -42,7 +42,7 @@ const TransformationSection = () => (
           <span className="text-primary italic">będzie</span>
         </h2>
         <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-20">
-          Stodoła Wymysłacz jest w trakcie remontu. Każda para rąk i każda złotówka przybliża nas do
+          Stodoła Wymyślacz jest w trakcie remontu. Każda para rąk i każda złotówka przybliża nas do
           miejsca, które będzie służyło wspólnocie przez pokolenia. Zobacz, skąd startujemy — i
           dokąd zmierzamy.
         </p>
