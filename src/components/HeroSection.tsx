@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import clayTexture from "@/assets/clay-texture.jpg";
+import heroPhoto from "@/assets/zespol.jpg";
 
 const quoteText = "„Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.\u201D";
 
@@ -14,7 +15,7 @@ const HeroSection = () =>
     </div>
 
     <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-8 w-full py-[20vh]">
-      <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
         <div className="lg:col-span-7">
           <motion.p
           initial={{ opacity: 0 }}
@@ -60,6 +61,28 @@ const HeroSection = () =>
             </a>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="lg:col-span-5 mt-12 lg:mt-0"
+        >
+          <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-muted">
+            <img
+              src={heroPhoto}
+              alt="Zespół Stodoła Wymyślacz przed drewnianym domem"
+              className="w-full h-[420px] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            <div className="absolute bottom-6 left-6 text-white">
+              <p className="text-xs uppercase tracking-[0.3em] font-bold text-white/70">
+                Archiwum
+              </p>
+              <p className="text-lg font-semibold">Stodoła Wymyślacz</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Quote */}
