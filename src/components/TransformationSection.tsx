@@ -1,10 +1,6 @@
 import RevealSection from "./RevealSection";
 import kitchenBefore from "@/assets/kitchen-before.jpg";
 import kitchenAfter from "@/assets/kitchen-after.jpg";
-import barnBefore from "@/assets/barn-before.jpg";
-import barnAfter from "@/assets/barn-after.jpg";
-import workshopBefore from "@/assets/workshop-before.jpg";
-import workshopAfter from "@/assets/workshop-after.jpg";
 
 const transformations = [
   {
@@ -13,20 +9,6 @@ const transformations = [
       "Z ciemnej, zniszczonej kuchni tworzymy jasne serce domu — miejsce, gdzie wspólnota spotyka się przy stole.",
     before: kitchenBefore,
     after: kitchenAfter,
-  },
-  {
-    title: "Serce Stodoły",
-    description:
-      "Z zagraconego wnętrza stodoły powstaje ciepła przestrzeń do życia — z kominkiem, gliną na ścianach i drewnem nad głową.",
-    before: barnBefore,
-    after: barnAfter,
-  },
-  {
-    title: "Warsztat budownictwa",
-    description:
-      "Kąt pełen rupiecidzieli staje się zorganizowanym warsztatem — miejscem, gdzie uczymy budować z natury.",
-    before: workshopBefore,
-    after: workshopAfter,
   },
 ];
 
