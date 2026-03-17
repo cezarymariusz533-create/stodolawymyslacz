@@ -24,9 +24,18 @@ const Footer = () =>
           </div>
         </div>
         <div className="lg:col-span-3 mt-8 lg:mt-0 lg:text-right">
-          <p className="text-xs text-muted-foreground">© 2026 Stodoła Wymyślacz          unite@wp.pl         576 365 711 - Czarek        733 469 669 - Kuba
-
-        </p>
+          <p className="text-xs text-muted-foreground">
+            © 2026 Stodoła Wymyślacz
+          </p>
+          <p className="text-xs text-muted-foreground mt-1">
+            unite@wp.pl
+          </p>
+          <p className="text-xs text-muted-foreground mt-1">
+            576 365 711 — Czarek
+          </p>
+          <p className="text-xs text-muted-foreground mt-1">
+            733 469 669 — Kuba
+          </p>
         </div>
       </div>
     </div>
