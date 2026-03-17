@@ -2,12 +2,6 @@ import RevealSection from "./RevealSection";
 
 const actions = [
   {
-    title: "Przyjedź na warsztaty",
-    desc: "Naucz się budować z gliny i słomy. Poczuj, jak pachnie praca z ziemią.",
-    cta: "Zobacz terminy",
-    href: "#warsztaty",
-  },
-  {
     title: "Współtwórz miejsce",
     desc: "Zostań częścią wspólnoty. Przyjedź na wolontariat, zostań na dłużej.",
     cta: "Napisz do nas",
