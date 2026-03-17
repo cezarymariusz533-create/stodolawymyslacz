@@ -1,23 +1,26 @@
 import RevealSection from "./RevealSection";
+import andrzejFoto from "@/assets/andrzej-foto.jpg";
+import pawelFoto from "@/assets/pawel-foto.jpg";
+import kubaFoto from "@/assets/kuba-foto.png";
 
 const people = [
   {
     name: "Andrzej",
     role: "Wizjoner i założyciel",
-    desc: "Podróżnik po europejskich ekowiosekach. Mieszkał w Sieben Linden. Przywiózł na Śląsk ideę życia we wspólnocie z ziemią.",
-    initials: "A",
+    desc: "Podróżnik po europejskich ekowiosekach. Mieszkał w Sieben Linden.",
+    photo: andrzejFoto,
   },
   {
     name: "Paweł Płaczek",
     role: "Budowniczy naturalny",
-    desc: "Mistrz tynków glinianych i izolacji ze słomy. Prowadzi warsztaty budownictwa naturalnego. Wierzy, że dom powinien oddychać.",
-    initials: "PP",
+    desc: "Podróżnik, nurek, paralotniarz.",
+    photo: pawelFoto,
   },
   {
     name: "Kuba",
     role: "Współtwórca",
-    desc: "Łączy technologię z naturą. Wspiera samowystarczalność energetyczną i dokumentuje wiedzę archiwum Stodoły.",
-    initials: "K",
+    desc: "Mistrz tynków glinianych i izolacji ze słomy. Prowadzi warsztaty budownictwa naturalnego.",
+    photo: kubaFoto,
   },
 ];
 
@@ -37,11 +40,12 @@ const PeopleSection = () => (
         {people.map((person, i) => (
           <RevealSection key={person.name} delay={i * 0.15}>
             <div className="border-t border-foreground/10 pt-8 pb-12">
-              {/* Initials block */}
-              <div className="w-20 h-20 bg-primary flex items-center justify-center mb-6">
-                <span className="text-primary-foreground font-display font-bold text-xl">
-                  {person.initials}
-                </span>
+              <div className="w-20 h-20 rounded-full overflow-hidden mb-6 bg-muted">
+                <img
+                  src={person.photo}
+                  alt={person.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-display font-bold text-xl tracking-tight mb-1">
                 {person.name}
@@ -57,7 +61,6 @@ const PeopleSection = () => (
         ))}
       </div>
 
-      {/* Banner */}
       <RevealSection delay={0.5}>
         <div className="mt-16 border-t border-foreground/10 pt-12">
           <h3 className="font-display font-bold text-2xl lg:text-3xl tracking-tight mb-4">
