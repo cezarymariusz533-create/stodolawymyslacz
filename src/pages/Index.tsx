@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import PillarsSection from "@/components/PillarsSection";
 import TransformationSection from "@/components/TransformationSection";
 import WorkshopsSection from "@/components/WorkshopsSection";
+import GallerySection from "@/components/GallerySection";
 import PeopleSection from "@/components/PeopleSection";
 import JoinSection from "@/components/JoinSection";
 import Footer from "@/components/Footer";
