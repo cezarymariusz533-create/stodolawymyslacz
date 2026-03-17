@@ -1,22 +1,9 @@
 import RevealSection from "./RevealSection";
-import sloma1 from "@/assets/warsztaty-sloma-1.jpg";
-import sloma2 from "@/assets/warsztaty-sloma-2.jpg";
-import sloma3 from "@/assets/warsztaty-sloma-3.jpg";
 import joga1 from "@/assets/warsztaty-joga-1.jpg";
 import joga2 from "@/assets/warsztaty-joga-2.jpg";
 import joga3 from "@/assets/warsztaty-joga-3.jpg";
 
 const archiveWorkshops = [
-  {
-    title: "Budowanie ze słomy",
-    description:
-      "Warsztaty konstrukcji ścian ze słomy — od przygotowania beli, przez wypełnianie szkieletu, po izolację i wykończenie.",
-    photos: [
-      { src: sloma1, alt: "Wypełnianie szkieletu belami słomy" },
-      { src: sloma2, alt: "Przygotowanie beli słomy do budowy" },
-      { src: sloma3, alt: "Montaż izolacji ze słomy w ścianie" },
-    ],
-  },
   {
     title: "Joga na łące",
     description:
