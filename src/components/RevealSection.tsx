@@ -9,8 +9,8 @@ interface RevealSectionProps {
 
 const RevealSection = ({ children, className = "", delay = 0 }: RevealSectionProps) => (
   <motion.div
-    initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
-    whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay }}
     className={className}

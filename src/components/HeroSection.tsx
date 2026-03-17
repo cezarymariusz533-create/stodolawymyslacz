@@ -4,7 +4,7 @@ import clayTexture from "@/assets/clay-texture.jpg";
 const quoteText = "„Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.\u201D";
 
 const HeroSection = () =>
-<section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+<section id="hero" className="relative min-h-screen flex items-center">
     {/* Background texture */}
     <div className="absolute inset-0 z-0">
       <img
@@ -25,8 +25,8 @@ const HeroSection = () =>
           </motion.p>
 
           <motion.h1
-          initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
-          animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.3 }}
           className="font-display font-bold leading-[0.9] tracking-tighter mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}>
