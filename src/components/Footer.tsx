@@ -1,5 +1,5 @@
-const Footer = () => (
-  <footer className="border-t border-foreground/10 py-16">
+const Footer = () =>
+<footer className="border-t border-foreground/10 py-16">
     <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5 mb-8 lg:mb-0">
@@ -24,13 +24,13 @@ const Footer = () => (
           </div>
         </div>
         <div className="lg:col-span-3 mt-8 lg:mt-0 lg:text-right">
-          <p className="text-xs text-muted-foreground">
-            © 2026 Stodoła Wymysłacz
-          </p>
+          <p className="text-xs text-muted-foreground">© 2026 Stodoła Wymysłacz          unite@wp.pl         576 365 711 - Czarek        733 469 669 - Kuba
+
+        </p>
         </div>
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;
