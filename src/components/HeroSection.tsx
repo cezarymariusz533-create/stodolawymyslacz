@@ -74,10 +74,10 @@ const HeroSection = () =>
       transition={{ duration: 1, delay: 1.2 }}
       className="mt-24 border-t border-foreground/10 pt-8 max-w-[65ch]">
       
-        <p className="font-display lg:text-2xl leading-snug tracking-tight italic text-foreground/80 text-2xl text-left">"Skolim
-
-        <br />
-          To my należymy do Ziemi."
+        <p className="font-display lg:text-2xl leading-snug tracking-tight italic text-foreground/80 text-2xl text-left">
+          „Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.”
+          <br /><br />
+          Henryk Skolimowski
         </p>
       </motion.blockquote>
     </div>
