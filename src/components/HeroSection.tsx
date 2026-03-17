@@ -75,9 +75,10 @@ const HeroSection = () =>
       className="mt-24 border-t border-foreground/10 pt-8 max-w-[65ch]">
       
         <p className="font-display lg:text-2xl leading-snug tracking-tight italic text-foreground/80 text-2xl text-left">
-          „Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.”
-          <br /><br />
-          Henryk Skolimowski
+          <span>{"„Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.""}</span>
+        </p>
+        <p className="font-display lg:text-2xl leading-snug tracking-tight text-foreground/80 mt-4">
+          <span>Henryk Skolimowski</span>
         </p>
       </motion.blockquote>
     </div>
