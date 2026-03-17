@@ -32,7 +32,7 @@ const HeroSection = () =>
           style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}>
             STODOŁA
             <br />
-            WYMYSŁACZ
+            WYMYŚLACZ
           </motion.h1>
 
           <motion.p

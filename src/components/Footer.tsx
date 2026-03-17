@@ -4,7 +4,7 @@ const Footer = () =>
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5 mb-8 lg:mb-0">
           <h4 className="font-display font-bold text-lg tracking-tight mb-2">
-            STODOŁA WYMYSŁACZ
+            STODOŁA WYMYŚLACZ
           </h4>
           <p className="text-sm text-muted-foreground">
             Lubliniec, Śląsk, Polska
@@ -24,7 +24,7 @@ const Footer = () =>
           </div>
         </div>
         <div className="lg:col-span-3 mt-8 lg:mt-0 lg:text-right">
-          <p className="text-xs text-muted-foreground">© 2026 Stodoła Wymysłacz          unite@wp.pl         576 365 711 - Czarek        733 469 669 - Kuba
+          <p className="text-xs text-muted-foreground">© 2026 Stodoła Wymyślacz          unite@wp.pl         576 365 711 - Czarek        733 469 669 - Kuba
 
         </p>
         </div>
