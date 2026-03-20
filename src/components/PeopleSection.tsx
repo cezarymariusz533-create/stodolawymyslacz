@@ -23,6 +23,12 @@ const people = [
     desc: "Mistrz tynków glinianych i izolacji ze słomy. Prowadzi warsztaty budownictwa naturalnego.",
     photo: kubaFoto,
   },
+  {
+    name: "Czaro",
+    role: "Projektant i filozof",
+    desc: "Projektant, grajek, filozof.",
+    photo: czaroFoto,
+  },
 ];
 
 const PeopleSection = () => (
