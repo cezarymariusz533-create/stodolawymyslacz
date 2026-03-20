@@ -3,7 +3,7 @@ import ArchiveSidebar from "@/components/ArchiveSidebar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import PillarsSection from "@/components/PillarsSection";
-import TransformationSection from "@/components/TransformationSection";
+
 import WorkshopsSection from "@/components/WorkshopsSection";
 import GallerySection from "@/components/GallerySection";
 import PeopleSection from "@/components/PeopleSection";
@@ -18,7 +18,7 @@ const Index = () => (
       <HeroSection />
       <AboutSection />
       <PillarsSection />
-      <TransformationSection />
+      
       <WorkshopsSection />
       <GallerySection />
       <PeopleSection />
