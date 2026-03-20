@@ -1,5 +1,7 @@
 import RevealSection from "./RevealSection";
-import barnInterior from "@/assets/barn-interior.jpg";
+import photo3D from "@/assets/3d-model.jpg";
+import photoBiuro from "@/assets/biuro-sw.jpg";
+import photoDom from "@/assets/dom.jpg";
 
 const AboutSection = () => (
   <section id="o-miejscu" className="border-t border-foreground/10 py-[15vh]">
@@ -48,11 +50,23 @@ const AboutSection = () => (
 
         <div className="lg:col-span-5 mt-12 lg:mt-0">
           <RevealSection delay={0.4}>
-            <img
-              src={barnInterior}
-              alt="Wnętrze stodoły z drewnianą konstrukcją"
-              className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-            />
+            <div className="grid grid-cols-2 gap-3">
+              <img
+                src={photoDom}
+                alt="Dom Stodoły Wymyślacz z panelami słonecznymi"
+                className="col-span-2 w-full aspect-[16/9] object-cover rounded-lg hover:grayscale-0 transition-all duration-700"
+              />
+              <img
+                src={photo3D}
+                alt="Model 3D konstrukcji stodoły"
+                className="w-full aspect-square object-cover rounded-lg hover:grayscale-0 transition-all duration-700"
+              />
+              <img
+                src={photoBiuro}
+                alt="Biuro w Stodole Wymyślacz"
+                className="w-full aspect-square object-cover rounded-lg hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
           </RevealSection>
         </div>
       </div>
