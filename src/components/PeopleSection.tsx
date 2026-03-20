@@ -2,6 +2,7 @@ import RevealSection from "./RevealSection";
 import andrzejFoto from "@/assets/andrzej-foto.jpg";
 import pawelFoto from "@/assets/pawel-foto.jpg";
 import kubaFoto from "@/assets/kuba-foto.png";
+import czaroFoto from "@/assets/czaro-foto.jpg";
 
 const people = [
   {
@@ -22,6 +23,12 @@ const people = [
     desc: "Mistrz tynków glinianych i izolacji ze słomy. Prowadzi warsztaty budownictwa naturalnego.",
     photo: kubaFoto,
   },
+  {
+    name: "Czaro",
+    role: "Projektant i filozof",
+    desc: "Projektant, grajek, filozof.",
+    photo: czaroFoto,
+  },
 ];
 
 const PeopleSection = () => (
@@ -36,7 +43,7 @@ const PeopleSection = () => (
         </h2>
       </RevealSection>
 
-      <div className="grid md:grid-cols-3 gap-1">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
         {people.map((person, i) => (
           <RevealSection key={person.name} delay={i * 0.15}>
             <div className="border-t border-foreground/10 pt-8 pb-12">
