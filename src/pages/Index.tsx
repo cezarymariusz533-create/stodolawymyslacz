@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import ArchiveSidebar from "@/components/ArchiveSidebar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import PillarsSection from "@/components/PillarsSection";
+
 
 import WorkshopsSection from "@/components/WorkshopsSection";
 import GallerySection from "@/components/GallerySection";
@@ -17,7 +17,7 @@ const Index = () => (
     <main className="xl:mr-[140px]">
       <HeroSection />
       <AboutSection />
-      <PillarsSection />
+      
       
       <WorkshopsSection />
       <GallerySection />

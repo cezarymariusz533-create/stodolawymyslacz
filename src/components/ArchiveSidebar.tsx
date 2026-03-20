@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 const sections = [
   { id: "hero", code: "SW-00", label: "WEJŚCIE" },
   { id: "o-miejscu", code: "SW-01", label: "MIEJSCE" },
-  { id: "dzialania", code: "SW-02", label: "DZIAŁANIA" },
-  { id: "warsztaty", code: "SW-03", label: "WARSZTATY" },
-  { id: "ludzie", code: "SW-04", label: "LUDZIE" },
-  { id: "dolacz", code: "SW-05", label: "DOŁĄCZ" },
+  { id: "warsztaty", code: "SW-02", label: "WARSZTATY" },
+  { id: "ludzie", code: "SW-03", label: "LUDZIE" },
+  { id: "dolacz", code: "SW-04", label: "DOŁĄCZ" },
 ];
 
 const ArchiveSidebar = () => {
