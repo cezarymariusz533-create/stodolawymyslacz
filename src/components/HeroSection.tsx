@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import clayTexture from "@/assets/clay-texture.jpg";
-import heroPhoto from "@/assets/zespol.jpg";
+import heroPhoto from "@/assets/zaspol.jpg";
 
 const quoteText = "„Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.\u201D";
 
