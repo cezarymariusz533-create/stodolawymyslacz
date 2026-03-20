@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "O miejscu", href: "#o-miejscu" },
-  { label: "Działania", href: "#dzialania" },
   { label: "Warsztaty", href: "#warsztaty" },
   { label: "Ludzie", href: "#ludzie" },
 ];
