@@ -2,6 +2,7 @@ import RevealSection from "./RevealSection";
 import andrzejFoto from "@/assets/andrzej-foto.jpg";
 import pawelFoto from "@/assets/pawel-foto.jpg";
 import kubaFoto from "@/assets/kuba-foto.png";
+import czaroFoto from "@/assets/czaro-foto.jpg";
 
 const people = [
   {
