@@ -21,9 +21,9 @@ const HeroSection = () =>
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-xs uppercase tracking-widest font-bold text-muted-foreground mb-8">
-            Lubliniec, Śląsk
-          </motion.p>
+          className="text-xs uppercase tracking-widest font-bold text-muted-foreground mb-8">LUBLINIEC, ŚLĄSK. UNITE@WP.PL
+
+        </motion.p>
 
           <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -40,15 +40,15 @@ const HeroSection = () =>
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg leading-relaxed text-muted-foreground mb-12 max-w-[50ch]">
-            Archiwum wiedzy wspólnot i niezależności
-          </motion.p>
+          className="text-lg leading-relaxed text-muted-foreground mb-12 max-w-[50ch]">Archiwum wiedzy wspólnot i niezależności
 
-          <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="flex flex-wrap gap-4">
+
+        </motion.p>
+
+          <motion.div initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="flex flex-wrap gap-4">
             <a
             href="#dolacz"
             className="border border-foreground px-6 py-3 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300">
@@ -63,17 +63,17 @@ const HeroSection = () =>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="lg:col-span-5 mt-12 lg:mt-0"
-        >
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+        className="lg:col-span-5 mt-12 lg:mt-0">
+        
           <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-muted">
             <img
-              src={heroPhoto}
-              alt="Zespół Stodoła Wymyślacz przed drewnianym domem"
-              className="w-full h-[420px] object-cover"
-            />
+            src={heroPhoto}
+            alt="Zespół Stodoła Wymyślacz przed drewnianym domem"
+            className="w-full h-[420px] object-cover" />
+          
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
               <p className="text-xs uppercase tracking-[0.3em] font-bold text-white/70">
@@ -95,8 +95,8 @@ const HeroSection = () =>
           {quoteText}
         </p>
         <p className="font-display lg:text-2xl leading-snug tracking-tight text-foreground/80 mt-4"><br></br>
-          Henryk Skolimowski
-        </p>
+Henryk Skolimowski                                                    unite@wp.pl
+      </p>
       </motion.blockquote>
     </div>
   </section>;

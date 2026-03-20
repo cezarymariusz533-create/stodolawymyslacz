@@ -3,9 +3,9 @@ const Footer = () =>
     <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5 mb-8 lg:mb-0">
-          <h4 className="font-display font-bold text-lg tracking-tight mb-2">
-            STODOŁA WYMYŚLACZ
-          </h4>
+          <h4 className="font-display font-bold text-lg tracking-tight mb-2">STODOŁA WYMYŚLACZ                                                                                                                                                        unite@wp.pl
+
+        </h4>
           <p className="text-sm text-muted-foreground">
             Lubliniec, Śląsk, Polska
           </p>
