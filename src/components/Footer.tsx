@@ -1,3 +1,5 @@
+import logoSw from "@/assets/logo-sw.png";
+
 const Footer = () =>
 <footer className="border-t border-foreground/10 py-16">
     <div className="max-w-[1400px] mx-auto px-6 lg:px-8">

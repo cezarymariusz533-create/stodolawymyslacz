@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoSw from "@/assets/logo-sw.png";
 
 const navLinks = [
   { label: "O miejscu", href: "#o-miejscu" },
@@ -33,7 +34,8 @@ const Navigation = () => {
             className="fixed top-0 left-0 right-0 z-50 bg-background/95 border-b border-foreground/10"
           >
             <div className="max-w-[1400px] mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-              <a href="#" className="font-display font-bold text-sm tracking-tight">
+              <a href="#" className="flex items-center gap-2 font-display font-bold text-sm tracking-tight">
+                <img src={logoSw} alt="Logo Stodoła Wymyślacz" className="h-8 w-8" />
                 STODOŁA WYMYŚLACZ
               </a>
               <div className="hidden md:flex items-center gap-8">
