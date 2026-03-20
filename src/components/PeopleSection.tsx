@@ -25,7 +25,7 @@ const people = [
   },
   {
     name: "Czaro",
-    role: "Projektant i filozof",
+    role: "Projektant",
     desc: "Projektant, grajek, filozof.",
     photo: czaroFoto,
   },
