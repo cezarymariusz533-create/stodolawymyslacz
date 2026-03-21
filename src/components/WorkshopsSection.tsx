@@ -46,7 +46,7 @@ const WorkshopsSection = () => (
                       <img
                         src={photo.src}
                         alt={photo.alt}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                       />
                     </div>
                     <figcaption className="text-xs text-muted-foreground mt-2 font-mono">
