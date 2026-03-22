@@ -71,7 +71,7 @@ const PeopleSection = () => (
       <RevealSection delay={0.5}>
         <div className="mt-16 border-t border-foreground/10 pt-12">
           <h3 className="font-display font-bold text-2xl lg:text-3xl tracking-tight mb-4">
-            Miejsce, które rośnie
+            Miejsce, które wzrasta
           </h3>
           <p className="text-muted-foreground leading-relaxed max-w-[65ch] text-lg">
             Stodoła jest w ciągłej budowie — tak jak wspólnota, która ją tworzy. Każdy warsztat
