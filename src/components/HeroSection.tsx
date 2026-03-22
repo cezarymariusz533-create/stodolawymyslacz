@@ -95,7 +95,7 @@ const HeroSection = () =>
           {quoteText}
         </p>
         <p className="font-display lg:text-2xl leading-snug tracking-tight text-foreground/80 mt-4"><br></br>
-Henryk Skolimowski                                                    unite@wp.pl
+Henryk Skolimowski                                                                                                                                      unite@wp.pl
       </p>
       </motion.blockquote>
     </div>

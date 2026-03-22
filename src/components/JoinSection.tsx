@@ -22,8 +22,7 @@ const JoinSection = () =>
         <p className="text-xs uppercase tracking-widest font-bold text-muted-foreground mb-4">
           Dołącz
         </p>
-        <h2 className="font-display font-bold text-3xl lg:text-4xl tracking-tight mb-16">Sposoby, żeby zacząć
-
+        <h2 className="font-display font-bold text-3xl lg:text-4xl tracking-tight mb-16">Wsparcie
       </h2>
       </RevealSection>
 
