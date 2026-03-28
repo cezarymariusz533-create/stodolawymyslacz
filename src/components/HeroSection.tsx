@@ -73,7 +73,6 @@ const HeroSection = () =>
             src={heroVideo}
             autoPlay
             loop
-            muted
             playsInline
             className="w-full h-[420px] object-cover" />
           
