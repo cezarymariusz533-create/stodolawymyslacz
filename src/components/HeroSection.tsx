@@ -1,10 +1,23 @@
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 import clayTexture from "@/assets/clay-texture.jpg";
 import heroVideo from "@/assets/stodola-wymyslacz-1.mp4";
 
 const quoteText = "„Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.\u201D";
 
-const HeroSection = () =>
+const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
+  return (
 <section id="hero" className="relative min-h-screen flex items-center">
     {/* Background texture */}
     <div className="absolute inset-0 z-0">
