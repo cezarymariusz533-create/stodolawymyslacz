@@ -70,6 +70,14 @@ const HeroSection = () =>
         
           <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-muted">
             <video
+            ref={(el) => {
+              if (el) {
+                el.muted = true;
+                el.play().then(() => {
+                  el.muted = false;
+                }).catch(() => {});
+              }
+            }}
             src={heroVideo}
             autoPlay
             loop
@@ -79,7 +87,7 @@ const HeroSection = () =>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
               <p className="text-xs uppercase tracking-[0.3em] font-bold text-white/70">
-                Archiwum
+                Wizja
               </p>
               <p className="text-lg font-semibold">Stodoła Wymyślacz</p>
             </div>
