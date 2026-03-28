@@ -69,9 +69,12 @@ const HeroSection = () =>
         className="lg:col-span-5 mt-12 lg:mt-0">
         
           <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-muted">
-            <img
-            src={heroPhoto}
-            alt="Zespół Stodoła Wymyślacz przed drewnianym domem"
+            <video
+            src={heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-[420px] object-cover" />
           
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
