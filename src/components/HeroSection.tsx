@@ -14,21 +14,16 @@ const HeroSection = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    const tryPlay = () => {
-      video.muted = true;
-      video.play().then(() => {
-        video.muted = false;
-        setIsMuted(false);
-      }).catch(() => {
-        setIsMuted(true);
-      });
-    };
-
-    tryPlay();
+    // Always start muted — browsers require this for autoplay
+    video.muted = true;
+    setIsMuted(true);
+    video.play().catch(() => {});
 
     const handleVisibility = () => {
       if (!document.hidden && video.paused) {
-        tryPlay();
+        video.muted = true;
+        setIsMuted(true);
+        video.play().catch(() => {});
       }
     };
 
