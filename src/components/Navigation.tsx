@@ -62,6 +62,15 @@ const Navigation = () => {
                 >
                   Dołącz
                 </a>
+                <a
+                  href="https://buycoffee.to/cezarymackiewicz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs uppercase tracking-widest font-bold text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  title="Wesprzyj nas kawą"
+                >
+                  <img src={buycoffeeIcon} alt="Buy Coffee" className="h-5 w-5" />
+                </a>
               </div>
             </div>
           </motion.nav>
