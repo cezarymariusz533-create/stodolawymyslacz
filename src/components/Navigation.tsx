@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoSw from "@/assets/logo-sw.png";
+import buycoffeeIcon from "@/assets/buycoffee-icon.png";
 
 const navLinks = [
   { label: "O miejscu", href: "#o-miejscu" },
