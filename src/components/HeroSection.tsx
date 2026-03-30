@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import clayTexture from "@/assets/clay-texture.jpg";
 import heroVideo from "@/assets/stodola-wymyslacz-1.mp4";
@@ -9,6 +9,32 @@ const quoteText = "„Potrzebujemy filozofii, która nie tylko opisuje świat, a
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      video.muted = true;
+      video.play().then(() => {
+        video.muted = false;
+        setIsMuted(false);
+      }).catch(() => {
+        setIsMuted(true);
+      });
+    };
+
+    tryPlay();
+
+    const handleVisibility = () => {
+      if (!document.hidden && video.paused) {
+        tryPlay();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, []);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -90,16 +116,8 @@ const HeroSection = () => {
           >
             <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-muted">
               <video
-                ref={(el) => {
-                  if (el && !videoRef.current) {
-                    videoRef.current = el;
-                    el.muted = true;
-                    el.play().then(() => {
-                      el.muted = false;
-                      setIsMuted(false);
-                    }).catch(() => {});
-                  }
-                }}
+              ref={videoRef}
+              muted
                 src={heroVideo}
                 autoPlay
                 loop
