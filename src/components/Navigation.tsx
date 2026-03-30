@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoSw from "@/assets/logo-sw.png";
+import buycoffeeIcon from "@/assets/buycoffee-icon.png";
 
 const navLinks = [
   { label: "O miejscu", href: "#o-miejscu" },
@@ -60,6 +61,15 @@ const Navigation = () => {
                   className="border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300"
                 >
                   Dołącz
+                </a>
+                <a
+                  href="https://buycoffee.to/cezarymackiewicz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs uppercase tracking-widest font-bold text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  title="Wesprzyj nas kawą"
+                >
+                  <img src={buycoffeeIcon} alt="Buy Coffee" className="h-5 w-5" />
                 </a>
               </div>
             </div>
