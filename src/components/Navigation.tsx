@@ -69,7 +69,7 @@ const Navigation = () => {
                   className="border border-foreground px-4 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300 flex items-center gap-2"
                   title="Wesprzyj nas kawą"
                 >
-                  <img src={buycoffeeIcon} alt="Buy Coffee" className="h-4 w-4" />
+                  <img src={buycoffeeIcon} alt="Buy Coffee" className="h-6 w-6" />
                   Wesprzyj
                 </a>
               </div>
