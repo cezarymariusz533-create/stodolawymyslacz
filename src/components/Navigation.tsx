@@ -50,6 +50,13 @@ const Navigation = () => {
                   </a>
                 ))}
                 <a
+                  href="/Statut_Stowarzyszenia_Arte_Unite.pdf"
+                  download
+                  className="border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300"
+                >
+                  Statut Stowarzyszenia
+                </a>
+                <a
                   href="/Projekt_Nowego_Spoleczenstwa.pdf"
                   download
                   className="border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300"
