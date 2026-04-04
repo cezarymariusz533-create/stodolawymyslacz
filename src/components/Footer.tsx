@@ -9,7 +9,7 @@ const Footer = () =>
             <img src={logoSw} alt="Logo Stodoła Wymyślacz" className="h-10 w-10" />
             <h4 className="font-display font-bold text-lg tracking-tight">STODOŁA WYMYŚLACZ</h4>
           </div>
-          <p className="text-sm text-muted-foreground">unite@wp.pl</p>
+          <a href="mailto:unite@wp.pl" className="text-sm font-bold text-foreground hover:underline">unite@wp.pl</a>
           <p className="text-sm text-muted-foreground">
             Lubliniec, Śląsk, Polska
           </p>
@@ -31,15 +31,15 @@ const Footer = () =>
           <p className="text-xs text-muted-foreground">
             © 2026 Stodoła Wymyślacz
           </p>
-          <p className="text-xs text-muted-foreground mt-1">
+          <a href="mailto:unite@wp.pl" className="text-xs font-bold text-foreground hover:underline block mt-1">
             unite@wp.pl
-          </p>
-          <p className="text-xs text-muted-foreground mt-1">
+          </a>
+          <a href="tel:+48576365711" className="text-xs font-bold text-foreground hover:underline block mt-1">
             576 365 711 — Czarek
-          </p>
-          <p className="text-xs text-muted-foreground mt-1">
+          </a>
+          <a href="tel:+48733469669" className="text-xs font-bold text-foreground hover:underline block mt-1">
             733 469 669 — Kuba
-          </p>
+          </a>
         </div>
       </div>
     </div>
