@@ -9,7 +9,7 @@ const Footer = () =>
             <img src={logoSw} alt="Logo Stodoła Wymyślacz" className="h-10 w-10" />
             <h4 className="font-display font-bold text-lg tracking-tight">STODOŁA WYMYŚLACZ</h4>
           </div>
-          <p className="text-sm text-muted-foreground">unite@wp.pl</p>
+          <a href="mailto:unite@wp.pl" className="text-sm font-bold text-foreground hover:underline">unite@wp.pl</a>
           <p className="text-sm text-muted-foreground">
             Lubliniec, Śląsk, Polska
           </p>
