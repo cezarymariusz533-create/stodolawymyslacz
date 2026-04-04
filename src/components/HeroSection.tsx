@@ -101,6 +101,20 @@ const HeroSection = () => {
                 Zobacz warsztaty
               </a>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className="mt-6"
+            >
+              <a
+                href="mailto:unite@wp.pl"
+                className="inline-flex items-center gap-2 text-sm font-bold text-foreground tracking-wide hover:underline"
+              >
+                ✉ unite@wp.pl
+              </a>
+            </motion.div>
           </div>
 
           <motion.div
@@ -149,8 +163,7 @@ const HeroSection = () => {
             {quoteText}
           </p>
           <p className="font-display lg:text-2xl leading-snug tracking-tight text-foreground/80 mt-4">
-            <br />
-            Henryk Skolimowski                                                                                                                                      unite@wp.pl
+            — Henryk Skolimowski
           </p>
         </motion.blockquote>
       </div>
