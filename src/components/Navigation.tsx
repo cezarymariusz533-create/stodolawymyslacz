@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import logoSw from "@/assets/logo-sw.png";
-import buycoffeeIcon from "@/assets/buycoffee-icon.png";
 
 const navLinks = [
   { label: "O miejscu", href: "#o-miejscu" },
@@ -9,9 +9,35 @@ const navLinks = [
   { label: "Ludzie", href: "#ludzie" },
 ];
 
+const actionLinks = [
+  {
+    label: "Statut Stowarzyszenia",
+    href: "/Statut_Stowarzyszenia_Arte_Unite.pdf",
+    download: true,
+  },
+  {
+    label: "Projekt nowej struktury społecznej",
+    href: "/Projekt_Nowego_Spoleczenstwa.pdf",
+    download: true,
+  },
+  {
+    label: "Dołącz",
+    href: "#dolacz",
+  },
+  {
+    label: "Wesprzyj",
+    href: "https://buycoffee.to/cezarymackiewicz",
+    external: true,
+  },
+];
+
+const linkClass =
+  "border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300 text-center";
+
 const Navigation = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +65,8 @@ const Navigation = () => {
                 <img src={logoSw} alt="Logo Stodoła Wymyślacz" className="h-8 w-8" />
                 STODOŁA WYMYŚLACZ
               </a>
+
+              {/* Desktop */}
               <div className="hidden md:flex items-center gap-8">
                 {navLinks.map((link) => (
                   <a
@@ -49,37 +77,66 @@ const Navigation = () => {
                     {link.label}
                   </a>
                 ))}
-                <a
-                  href="/Statut_Stowarzyszenia_Arte_Unite.pdf"
-                  download
-                  className="border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300"
-                >
-                  Statut Stowarzyszenia
-                </a>
-                <a
-                  href="/Projekt_Nowego_Spoleczenstwa.pdf"
-                  download
-                  className="border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300"
-                >
-                  Projekt nowej struktury społecznej
-                </a>
-                <a
-                  href="#dolacz"
-                  className="border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300"
-                >
-                  Dołącz
-                </a>
-                <a
-                  href="https://buycoffee.to/cezarymackiewicz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-foreground px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-foreground hover:text-background transition-colors duration-300"
-                  title="Wesprzyj nas kawą"
-                >
-                  Wesprzyj
-                </a>
+                {actionLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    {...(link.download ? { download: true } : {})}
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className={linkClass}
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </div>
+
+              {/* Mobile hamburger */}
+              <button
+                className="md:hidden p-2 text-foreground"
+                onClick={() => setMobileOpen(!mobileOpen)}
+                aria-label="Menu"
+              >
+                {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
             </div>
+
+            {/* Mobile menu */}
+            <AnimatePresence>
+              {mobileOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="md:hidden overflow-hidden bg-background border-t border-foreground/10"
+                >
+                  <div className="flex flex-col gap-4 px-6 py-6">
+                    {navLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="text-xs uppercase tracking-widest font-semibold text-muted-foreground hover:text-foreground transition-colors duration-300"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                    {actionLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        {...(link.download ? { download: true } : {})}
+                        {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        className={linkClass}
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.nav>
         )}
       </AnimatePresence>
