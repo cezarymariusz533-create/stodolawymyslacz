@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import clayTexture from "@/assets/clay-texture.jpg";
+import clayTexture from "@/assets/clay-texture-sepia.jpg";
 import heroVideo from "@/assets/stodola-wymyslacz-1.mp4";
 
 const quoteText = "„Potrzebujemy filozofii, która nie tylko opisuje świat, ale go integruje – tworząc pomost między nauką, duchowością i działaniem.\u201D";
@@ -45,7 +45,7 @@ const HeroSection = () => {
         <img
           src={clayTexture}
           alt="Tekstura gliny"
-          className="w-full h-full object-cover grayscale opacity-15"
+          className="w-full h-full object-cover sepia opacity-20"
         />
       </div>
 
