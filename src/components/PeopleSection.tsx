@@ -71,8 +71,8 @@ const PeopleSection = () => (
 
       <RevealSection delay={0.5}>
         <div className="mt-16 border-t border-foreground/10 pt-12">
-          <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
-            <div className="lg:col-span-6">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+            <div className="lg:col-span-8">
               <h3 className="font-display font-bold text-2xl lg:text-3xl tracking-tight mb-4">
                 Miejsce, które wzrasta
               </h3>
@@ -81,11 +81,11 @@ const PeopleSection = () => (
                 to kolejna warstwa gliny na ścianie, kolejny krok ku samowystarczalności.
               </p>
             </div>
-            <div className="lg:col-span-6 mt-8 lg:mt-0">
+            <div className="lg:col-span-4 mt-8 lg:mt-0">
               <img
-                src={wizjaPro}
-                alt="Wizja Stodoły Wymyślacz"
-                className="w-full rounded-lg"
+                src={wizjaAdv}
+                alt="Wizja Centrum Operacyjno-Kreatywnego"
+                className="w-full max-w-[240px] rounded-lg mx-auto"
               />
             </div>
           </div>
