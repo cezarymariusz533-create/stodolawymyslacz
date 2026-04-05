@@ -45,7 +45,7 @@ const HeroSection = () => {
         <img
           src={clayTexture}
           alt="Tekstura gliny"
-          className="w-full h-full object-cover grayscale opacity-15"
+          className="w-full h-full object-cover sepia opacity-20"
         />
       </div>
 
