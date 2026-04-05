@@ -2,6 +2,9 @@ import RevealSection from "./RevealSection";
 import joga1 from "@/assets/warsztaty-joga-1.jpg";
 import joga2 from "@/assets/warsztaty-joga-2.jpg";
 import joga3 from "@/assets/warsztaty-joga-3.jpg";
+import bud1 from "@/assets/warsztaty-budownictwo-1.jpg";
+import bud2 from "@/assets/warsztaty-budownictwo-2.jpg";
+import bud3 from "@/assets/warsztaty-budownictwo-3.jpg";
 
 const archiveWorkshops = [
   {
@@ -12,6 +15,16 @@ const archiveWorkshops = [
       { src: joga1, alt: "Stojące asany na łące w słońcu" },
       { src: joga2, alt: "Skłony i rozciąganie w trawie" },
       { src: joga3, alt: "Savasana — relaksacja na trawie o zachodzie" },
+    ],
+  },
+  {
+    title: "Warsztaty budownictwa naturalnego",
+    description:
+      "Nauka budowania ze słomy i gliny — od prasowania beli po tynkowanie ścian. Wspólna praca przy renowacji stodoły tradycyjnymi metodami.",
+    photos: [
+      { src: bud1, alt: "Prasowanie beli słomy do ścian" },
+      { src: bud2, alt: "Sznurowanie słomy w drewnianej prasie" },
+      { src: bud3, alt: "Tynkowanie gliną ścian stodoły" },
     ],
   },
 ];
