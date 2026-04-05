@@ -1,5 +1,5 @@
 import RevealSection from "./RevealSection";
-import wizjaPro from "@/assets/wizja-pro.png";
+import wizjaAdv from "@/assets/wizja-adv.png";
 import andrzejFoto from "@/assets/andrzej-foto.jpg";
 import pawelFoto from "@/assets/pawel-foto.jpg";
 import kubaFoto from "@/assets/kuba-foto.png";
