@@ -1,4 +1,5 @@
 import RevealSection from "./RevealSection";
+import wizjaPro from "@/assets/wizja-pro.png";
 import andrzejFoto from "@/assets/andrzej-foto.jpg";
 import pawelFoto from "@/assets/pawel-foto.jpg";
 import kubaFoto from "@/assets/kuba-foto.png";
@@ -73,10 +74,43 @@ const PeopleSection = () => (
           <h3 className="font-display font-bold text-2xl lg:text-3xl tracking-tight mb-4">
             Miejsce, które wzrasta
           </h3>
-          <p className="text-muted-foreground leading-relaxed max-w-[65ch] text-lg">
+          <p className="text-muted-foreground leading-relaxed max-w-[65ch] text-lg mb-8">
             Stodoła jest w ciągłej budowie — tak jak wspólnota, która ją tworzy. Każdy warsztat
             to kolejna warstwa gliny na ścianie, kolejny krok ku samowystarczalności.
           </p>
+
+          {/* Wizja image with FOR SALE ribbon on right half */}
+          <div className="relative max-w-2xl overflow-hidden rounded-lg">
+            <div className="grid grid-cols-2">
+              {/* Left half - as is */}
+              <div className="overflow-hidden">
+                <img
+                  src={wizjaPro}
+                  alt="Wizja Stodoły Wymyślacz — Centrum Operacyjno-Kreatywne"
+                  className="w-[200%] h-full object-cover object-left"
+                />
+              </div>
+              {/* Right half - with FOR SALE ribbon */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={wizjaPro}
+                  alt="Wizja Stodoły Wymyślacz — Strefa Chilloutu"
+                  className="w-[200%] h-full object-cover object-right ml-[-100%]"
+                />
+                {/* Diagonal ribbon */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div
+                    className="bg-red-600 text-white font-bold uppercase tracking-widest text-sm py-2 w-[140%] text-center shadow-lg"
+                    style={{ transform: "rotate(-35deg)" }}
+                  >
+                    For Sale
+                  </div>
+                </div>
+                {/* Semi-transparent overlay */}
+                <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+              </div>
+            </div>
+          </div>
         </div>
       </RevealSection>
     </div>
