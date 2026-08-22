@@ -14,29 +14,72 @@ const HeroSection = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Always start muted — browsers require this for autoplay
-    video.muted = true;
-    setIsMuted(true);
-    video.play().catch(() => {});
+    const tryUnmute = () => {
+      video.muted = false;
+      video.volume = 1;
+      video
+        .play()
+        .then(() => setIsMuted(false))
+        .catch(() => {
+          video.muted = true;
+          setIsMuted(true);
+          video.play().catch(() => {});
+        });
+    };
+
+    const start = () => {
+      video.muted = true;
+      setIsMuted(true);
+      video.play().catch(() => {});
+      // Try to enable sound right away (works if browser allows it)
+      tryUnmute();
+    };
+
+    start();
+    video.addEventListener("loadeddata", start);
+    video.addEventListener("canplay", start);
+
+    // First user interaction anywhere unmutes the video
+    const onInteract = () => {
+      tryUnmute();
+      window.removeEventListener("pointerdown", onInteract);
+      window.removeEventListener("keydown", onInteract);
+      window.removeEventListener("scroll", onInteract);
+    };
+    window.addEventListener("pointerdown", onInteract);
+    window.addEventListener("keydown", onInteract);
+    window.addEventListener("scroll", onInteract, { passive: true });
 
     const handleVisibility = () => {
       if (!document.hidden && video.paused) {
-        video.muted = true;
-        setIsMuted(true);
-        video.play().catch(() => {});
+        video.play().catch(() => {
+          video.muted = true;
+          setIsMuted(true);
+          video.play().catch(() => {});
+        });
       }
     };
 
     document.addEventListener("visibilitychange", handleVisibility);
-    return () => document.removeEventListener("visibilitychange", handleVisibility);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibility);
+      video.removeEventListener("loadeddata", start);
+      video.removeEventListener("canplay", start);
+      window.removeEventListener("pointerdown", onInteract);
+      window.removeEventListener("keydown", onInteract);
+      window.removeEventListener("scroll", onInteract);
+    };
   }, []);
 
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
+      videoRef.current.volume = 1;
       setIsMuted(videoRef.current.muted);
+      videoRef.current.play().catch(() => {});
     }
   };
+
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center">
@@ -131,8 +174,11 @@ const HeroSection = () => {
                 autoPlay
                 loop
                 playsInline
+                preload="auto"
+                controls={false}
                 className="w-full h-full object-contain"
               />
+
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none" />
               <button
