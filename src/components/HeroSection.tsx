@@ -181,6 +181,20 @@ const HeroSection = () => {
 
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none" />
+
+              {isMuted && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-black/60 text-white px-3 py-2 rounded-full border border-white/20 pointer-events-none"
+                >
+                  <VolumeX className="w-4 h-4" />
+                  <span className="text-xs uppercase tracking-widest font-bold">Włącz dźwięk</span>
+                </motion.div>
+              )}
+
               <button
                 onClick={toggleMute}
                 className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors z-10"
