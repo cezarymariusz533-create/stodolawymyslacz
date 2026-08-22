@@ -123,18 +123,18 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="lg:col-span-5 mt-12 lg:mt-0"
           >
-            <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-muted">
+            <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-black aspect-video">
               <video
-              ref={videoRef}
-              muted
+                ref={videoRef}
+                muted
                 src={heroVideo}
                 autoPlay
                 loop
                 playsInline
-                className="w-full h-[420px] object-cover"
+                className="w-full h-full object-contain"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none" />
               <button
                 onClick={toggleMute}
                 className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors z-10"
