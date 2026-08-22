@@ -71,8 +71,8 @@ const PeopleSection = () => (
 
       <RevealSection delay={0.5}>
         <div className="mt-16 border-t border-foreground/10 pt-12">
-          <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-            <div className="lg:col-span-8">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
+            <div className="lg:col-span-6">
               <h3 className="font-display font-bold text-2xl lg:text-3xl tracking-tight mb-4">
                 Miejsce, które wzrasta
               </h3>
@@ -81,12 +81,30 @@ const PeopleSection = () => (
                 to kolejna warstwa gliny na ścianie, kolejny krok ku samowystarczalności.
               </p>
             </div>
-            <div className="lg:col-span-4 mt-8 lg:mt-0">
+            <div className="lg:col-span-3 mt-8 lg:mt-0">
               <img
                 src={wizjaAdv}
                 alt="Wizja Centrum Operacyjno-Kreatywnego"
                 className="w-full max-w-[240px] rounded-lg mx-auto"
               />
+            </div>
+            <div className="lg:col-span-3 mt-8 lg:mt-0">
+              <div className="border border-foreground/10 rounded-lg p-5 bg-background shadow-sm">
+                <p className="font-display text-lg font-bold tracking-tight mb-3 leading-snug">
+                  Co naprawdę oznacza jedność w codziennym życiu? 🌿
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                  Sztuka Jedności w Stodole Wymyślacz to coś więcej niż słowa — to codzienna praktyka i poszukiwanie harmonii ze sobą, innymi oraz naturą. Nasze działania i duchowy wymiar tego miejsca mocno czerpią z filozofii zebranej na stronie FEAP:
+                </p>
+                <a
+                  href="http://www.feap.paraveda.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-foreground hover:text-primary transition-colors"
+                >
+                  👉 http://www.feap.paraveda.net/
+                </a>
+              </div>
             </div>
           </div>
         </div>
