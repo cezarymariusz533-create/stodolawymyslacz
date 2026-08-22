@@ -92,9 +92,8 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-8 w-full py-[20vh]">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-          <div className="lg:col-span-7">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-8 w-full py-[14vh]">
+        <div className="max-w-[70ch]">
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -158,59 +157,57 @@ const HeroSection = () => {
                 ✉ unite@wp.pl
               </a>
             </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="lg:col-span-5 mt-12 lg:mt-0"
-          >
-            <div className="relative rounded-[32px] border border-white/30 overflow-hidden shadow-[0_20px_60px_rgba(15,15,15,0.45)] bg-black aspect-video">
-              <video
-                ref={videoRef}
-                muted
-                src={heroVideo}
-                autoPlay
-                loop
-                playsInline
-                preload="auto"
-                controls={false}
-                className="w-full h-full object-contain"
-              />
-
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none" />
-
-              {isMuted && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.4 }}
-                  className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-black/60 text-white px-3 py-2 rounded-full border border-white/20 pointer-events-none"
-                >
-                  <VolumeX className="w-4 h-4" />
-                  <span className="text-xs uppercase tracking-widest font-bold">Włącz dźwięk</span>
-                </motion.div>
-              )}
-
-              <button
-                onClick={toggleMute}
-                className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors z-10"
-                aria-label={isMuted ? "Włącz dźwięk" : "Wycisz"}
-              >
-                {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-              </button>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-xs uppercase tracking-[0.3em] font-bold text-white/70">
-                  Wizja
-                </p>
-                <p className="text-lg font-semibold">Stodoła Wymyślacz</p>
-              </div>
-            </div>
-          </motion.div>
         </div>
+
+        {/* Panoramiczny film — pełna szerokość strony */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mt-16 -mx-6 lg:-mx-8 xl:-mr-[140px]"
+        >
+          <div className="relative overflow-hidden border-y border-foreground/10 bg-black">
+            <video
+              ref={videoRef}
+              muted
+              src={heroVideo}
+              autoPlay
+              loop
+              playsInline
+              preload="auto"
+              controls={false}
+              className="w-full h-auto max-h-[70vh] object-contain mx-auto"
+            />
+
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
+
+            {isMuted && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-black/60 text-white px-3 py-2 rounded-full border border-white/20 pointer-events-none"
+              >
+                <VolumeX className="w-4 h-4" />
+                <span className="text-xs uppercase tracking-widest font-bold">Włącz dźwięk</span>
+              </motion.div>
+            )}
+
+            <button
+              onClick={toggleMute}
+              className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors z-10"
+              aria-label={isMuted ? "Włącz dźwięk" : "Wycisz"}
+            >
+              {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+            </button>
+
+            <div className="absolute bottom-5 left-6 lg:left-10 text-white">
+              <p className="text-xs uppercase tracking-[0.3em] font-bold text-white/70">Wizja</p>
+              <p className="text-lg font-semibold">Stodoła Wymyślacz</p>
+            </div>
+          </div>
+        </motion.div>
+
 
         {/* Quote */}
         <motion.blockquote
