@@ -159,14 +159,14 @@ const HeroSection = () => {
             </motion.div>
         </div>
 
-        {/* Panoramiczny film — pełna szerokość strony */}
+        {/* Duży film wewnątrz głównej kolumny — bez zachodzenia na pasek boczny */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mt-16 -mx-6 lg:-mx-8 xl:-mr-[140px]"
+          className="mt-16 w-full max-w-5xl mx-auto"
         >
-          <div className="relative overflow-hidden border-y border-foreground/10 bg-black">
+          <div className="relative overflow-hidden rounded-lg border border-foreground/10 bg-black">
             <video
               ref={videoRef}
               muted
