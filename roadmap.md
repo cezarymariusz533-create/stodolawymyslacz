@@ -1,3 +1,3 @@
 # Roadmap
 
-- [ ] Wycentrować całą głowę Czaro w okrągłym portrecie.
+- [ ] Pokazać całą głowę Czaro, wraz z czołem, dokładnie pośrodku okrągłego portretu.
