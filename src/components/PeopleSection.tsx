@@ -52,7 +52,7 @@ const PeopleSection = () => (
                 <img
                   src={typeof person.photo === "string" ? person.photo : person.photo.url}
                   alt={person.name}
-                  className={`w-full h-full object-cover ${person.name === "Czaro" ? "object-[32%_12%] scale-[2.1] translate-x-[18%] translate-y-[18%]" : ""}`}
+                  className={`w-full h-full object-cover ${person.name === "Czaro" ? "object-top scale-[1.45] translate-x-[4%] translate-y-[16%] origin-top" : ""}`}
                 />
               </div>
               <h3 className="font-display font-bold text-xl tracking-tight mb-1">
