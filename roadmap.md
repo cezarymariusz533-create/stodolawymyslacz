@@ -1,3 +1,3 @@
 # Roadmap
 
-- [ ] Pokazać całą głowę Czaro, wraz z czołem, dokładnie pośrodku okrągłego portretu.
+- [ ] Pokazać całą głowę Czaro z zapasem nad czołem, dokładnie pośrodku kółka; bez ucięcia u góry.
