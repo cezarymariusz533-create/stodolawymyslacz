@@ -3,7 +3,7 @@ import wizjaAdv from "@/assets/wizja-adv.png";
 import andrzejFoto from "@/assets/andrzej-foto.jpg";
 import pawelFoto from "@/assets/pawel-foto.jpg";
 import kubaFoto from "@/assets/kuba-foto.png";
-import czaroFoto from "@/assets/czaro-head-centered.jpg.asset.json";
+import czaroFoto from "@/assets/czaro-head-centered.jpg";
 
 const people = [
   {
