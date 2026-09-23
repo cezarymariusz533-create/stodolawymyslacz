@@ -3,7 +3,7 @@ import wizjaAdv from "@/assets/wizja-adv.png";
 import andrzejFoto from "@/assets/andrzej-foto.jpg";
 import pawelFoto from "@/assets/pawel-foto.jpg";
 import kubaFoto from "@/assets/kuba-foto.png";
-import czaroFoto from "@/assets/czaro-portret.jpg.asset.json";
+import czaroFoto from "@/assets/czaro-head-centered.jpg.asset.json";
 
 const people = [
   {
@@ -52,7 +52,7 @@ const PeopleSection = () => (
                 <img
                   src={typeof person.photo === "string" ? person.photo : person.photo.url}
                   alt={person.name}
-                  className={`w-full h-full object-cover ${person.name === "Czaro" ? "object-top scale-[1.45] translate-x-[4%] translate-y-[16%] origin-top" : ""}`}
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <h3 className="font-display font-bold text-xl tracking-tight mb-1">
